@@ -39,7 +39,7 @@
 			<artifactId>spring-hateoas</artifactId>
 			<version>0.24.0.RELEASE</version>
 		</dependency>
-
+        <!-- Add support for XML-->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
