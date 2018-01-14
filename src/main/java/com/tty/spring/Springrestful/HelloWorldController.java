@@ -13,5 +13,4 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-
 }

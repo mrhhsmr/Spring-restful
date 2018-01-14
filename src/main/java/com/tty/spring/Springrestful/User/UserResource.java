@@ -51,6 +51,12 @@ public class UserResource {
 
 
     //Save User Service
+
+    /*
+    * public void createUser(@RequestBody User user){
+    *   User saveduser = service.saveUser(user);
+    * }
+    * */
     @PostMapping(path = "/users")
     public ResponseEntity<Object> createUser(@Valid @RequestBody User user){
         User saveduser = service.saveUser(user);
