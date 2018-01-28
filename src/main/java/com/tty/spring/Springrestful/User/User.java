@@ -21,17 +21,13 @@ public class User {
     @Size(min = 2)
     private String name;
 
-    @Past  //Java validation
-    private Date birthday;
-
-    protected User() {
+    public User() {
     }
 
-    public User(Integer id, String name, Date birthday) {
+    public User(Integer id, String name) {
         super();
         this.id = id;
         this.name = name;
-        this.birthday = birthday;
     }
 
     public Integer getId() {
@@ -48,13 +44,5 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
     }
 }
