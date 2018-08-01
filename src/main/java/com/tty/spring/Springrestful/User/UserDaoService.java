@@ -1,13 +1,14 @@
 package com.tty.spring.Springrestful.User;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-@Component
+@Service
 public class UserDaoService {
     private static List<User> users = new ArrayList<>();
 

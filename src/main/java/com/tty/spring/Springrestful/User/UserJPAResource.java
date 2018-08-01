@@ -20,9 +20,6 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 public class UserJPAResource {
 
     @Autowired
-    private UserDaoService service;
-
-    @Autowired
     private UserRepository userRepository;
     //retrieveAllUsers
     @GetMapping(path = "/jpa/users")

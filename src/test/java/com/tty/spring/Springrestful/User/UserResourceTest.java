@@ -51,11 +51,12 @@ public class UserResourceTest {
 
     @Test
     public void getAllBody() throws Exception {
-        Mockito.when(userDaoService.getAllUsers()).thenReturn(list);
+//        Mockito.when(userDaoService.getAllUsers()).thenReturn(list);
         RequestBuilder requestBuilder =
                 MockMvcRequestBuilders.get("/users").accept(MediaType.APPLICATION_JSON);
 
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+        System.out.println("hello  asdada " +  result.getResponse().getContentAsString());
         Assert.assertTrue(result.getResponse().getContentAsString().equals("[]"));
 
     }
@@ -72,7 +73,12 @@ public class UserResourceTest {
 
     @Test
     public void deleteUser() throws Exception {
+        Mockito.when(userDaoService.DeleteById(1)).thenReturn(mockUser);
+        RequestBuilder requestBuilder =
+                MockMvcRequestBuilders.delete("/users/1").accept(MediaType.APPLICATION_JSON);
 
+        MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+        Assert.assertEquals(HttpStatus.OK.value(), result.getResponse().getStatus());
     }
 
     @Test
